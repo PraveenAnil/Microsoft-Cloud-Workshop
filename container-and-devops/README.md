@@ -8,6 +8,14 @@ In addition,
 * Deploy to the Azure Kubernetes Service
 * Scale the application and test availability
 
+# Environment Details
+
+ * Azure Username: {{Azure_User_Id}}
+ * Azure Password: {{Azure_User_Password}}
+ * Linux VM DNS: {{Linux_VM_DNS}}
+ * Lab VM DNS: {{Lab_VM_DNS}}
+
+
 # Verify the pre-provisioned Environment
 
 * Open a browser instance in InPrivate / incognito mode and navigate to [Microsoft Azure Portal](https://portal.azure.com) 
@@ -16,7 +24,7 @@ In addition,
 * Note that you have access to two resource groups:
   1. **ODL-devops-containers-{{USER_ID}}-01** contains Build Agent VM
    [Note: For all tasks which involve deployment, use **ODL-devops-containers-{{USER_ID}}-01** ]
-  2. **ODL-devops-containers-{{USER_ID}}X-02** contains Windows Jump VM
+  2. **ODL-devops-containers-{{USER_ID}}-02** contains Windows Jump VM
   
 * Navigate to the resource group and view the already existing resources such as Container Service, build agent Linux VM, etc.
 * Verify that following resources are predeployed in the resource group **ODL-devops-containers-{{USER_ID}}-01**:
@@ -74,7 +82,7 @@ You can verify that the VM is installed with Azure CLI 2.0, Kubernetes CLI by ex
   
     1. Use the following command to SSH into the build agent VM
     
-       ssh -L 8001:127.0.0.1:8001 labuser@[linuxVmDnsName]
+       ssh -L 8001:127.0.0.1:8001 labuser@{{Linux_VM_DNS}}
 
    * **If you are using Putty to connect** 
 
@@ -82,7 +90,7 @@ You can verify that the VM is installed with Azure CLI 2.0, Kubernetes CLI by ex
 
     2.	An application window pops up when user run putty.exe.
 
-    3.	Enter the linuxVMDnsName of the VM to the Host Name (or IP address) box of the putty. Port will be 22 by default.
+    3.	Enter {{Linux_VM_DNS}} to the Host Name (or IP address) box of the putty. Port will be 22 by default.
 
     4.	Go to the Tunnels section in PuTTY, 
  
