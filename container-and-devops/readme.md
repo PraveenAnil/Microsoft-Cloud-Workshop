@@ -82,7 +82,7 @@ You can verify that the VM is installed with Azure CLI 2.0, Kubernetes CLI by ex
   
     1. Use the following command to SSH into the build agent VM
     
-       ssh -L 8001:127.0.0.1:8001 labuser@{{Linux_VM_DNS}}
+       ssh -L 8001:127.0.0.1:8001 labuser@{{LINUX_VM_DNS}}
 
    * **If you are using Putty to connect** 
 
@@ -90,7 +90,7 @@ You can verify that the VM is installed with Azure CLI 2.0, Kubernetes CLI by ex
 
     2.	An application window pops up when user run putty.exe.
 
-    3.	Enter {{Linux_VM_DNS}} to the Host Name (or IP address) box of the putty. Port will be 22 by default.
+    3.	Enter {{LINUX_VM_DNS}} to the Host Name (or IP address) box of the putty. Port will be 22 by default.
 
     4.	Go to the Tunnels section in PuTTY, 
  
@@ -141,32 +141,32 @@ connecting to the linux agent using SSH Client from the Windows Jump VM.
 
 * Enter the following command in Git bash before committing as in [Task 13](https://github.com/Microsoft/MCW-Containers-and-DevOps/blob/master/Hands-on%20lab/Before%20the%20HOL%20-%20Containers%20and%20DevOps.md#task-13-download-the-fabmedical-starter-files)
 
-   git config --global user.name "odl_user_XXXXX@xxxxxxx.onmicrosoft.com"
+   git config --global user.name "{{AZURE_USER_ID}}"
    
-   git config --global user.email "odl_user_XXXXX@xxxxxxx.onmicrosoft.com"
+   git config --global user.email "{{AZURE_USER_ID}}"
 
-   Substitute for "odl_user_XXXXX@xxxxxxx.onmicrosoft.com" with the username you received for Azure
+
  
 * For [Task 13 -> Step 7 Setup your VisualStudio.com repository as a new remote for push](https://github.com/Microsoft/MCW-Containers-and-DevOps/blob/master/Hands-on%20lab/Before%20the%20HOL%20-%20Containers%20and%20DevOps.md#task-13-download-the-fabmedical-starter-files) , edit the command to push an existing repository from command line:
 
-    git remote add origin https://odluserXXXXX@dev.azure.com/odluserXXXXX/fabmedical/_git/test 
+    git remote add origin https://odluser{{USER_ID}}@dev.azure.com/odluser{{USER_ID}}/fabmedical/_git/test 
     
     git push -u origin --all
 
-Remove the **odluserXXXXX@** from the above commands like given below:
+Remove the **odluser{{USER_ID}}@** from the above commands like given below:
      
-    git remote add origin https://dev.azure.com/odluserXXXXX/fabmedical/_git/test
+    git remote add origin https://dev.azure.com/odluser{{USER_ID}}/fabmedical/_git/test
     
     git push -u origin --all
     
 
-* Use **ODL-devops-containers-XXXXX-01** for deploying any resources to Azure
+* Use **ODL-devops-containers-{{USER_ID}}-01** for deploying any resources to Azure
 * For [Exercise 1 -> Task 7 ](https://github.com/Microsoft/MCW-Containers-and-DevOps/blob/master/Hands-on%20lab/HOL%20step-by-step%20-%20Containers%20and%20DevOps.md#task-7-push-images-to-azure-container-registry) -> Step 13,  you can use the Service Principal details provided in the Lab Details Page
 
 * Before executing git commit and git push commands, make sure config file in .git folder of each cloned folder ( content-init, content-api, content-web ) has [remote "origin"] URL in the following format :
   
      [remote "origin"]
-     url = https://dev.azure.com/odluserXXXXX/fabmedical/_git/content-api
+     url = https://dev.azure.com/odluser{{USER_ID}}/fabmedical/_git/content-api
   
   For editing the config file, you can execute the following commands one by one and edit the file and remove **odluserXXXXX@** from each file.
   
@@ -192,35 +192,34 @@ Remove the **odluserXXXXX@** from the above commands like given below:
 * Attendees need to use Git Bash instead of WSL in Windows Jump VM to complete Before Hands on Lab Task 13
 * Attendees need to execute the following command after Task 13 Step 4:
   
-    git config --global user.name "odl_user_XXXXX@xxxxxxx.onmicrosoft.com"
+    git config --global user.name "{{AZURE_USER_ID}}"
     
-    git config --global user.email "odl_user_XXXXX@xxxxxxx.onmicrosoft.com"
+    git config --global user.email "{{AZURE_USER_ID}}"
 
-   Substitute for "odl_user_XXXXX@xxxxxxx.onmicrosoft.com" with the username you received for Azure
 
 * **Users can connect to the Linux VM using SSH Client or RDP client** and execute the commands from either SSH Client or Terminal inside Linux VM as mentioned in  [Connect to Build Agent Linux VM](https://github.com/SpektraSystems/Microsoft-Cloud-Workshop/blob/master/container-and-devops/README.md#connect-to-build-agent-linux-vm) section
 
 * For [Task 13 -> Step 7 Setup your VisualStudio.com repository as a new remote for push](https://github.com/Microsoft/MCW-Containers-and-DevOps/blob/master/Hands-on%20lab/Before%20the%20HOL%20-%20Containers%20and%20DevOps.md#task-13-download-the-fabmedical-starter-files) , edit the command to push an existing repository from command line:
 
-    git remote add origin https://odluserXXXXX@dev.azure.com/odluserXXXXX/fabmedical/_git/test 
+    git remote add origin https://odluser{{USER_ID}}@dev.azure.com/odluser{{USER_ID}}/fabmedical/_git/test 
     
     git push -u origin --all
 
-Remove the **odluserXXXXX@** from the above commands like given below:
+Remove the **odluser{{USER_ID}}@** from the above commands like given below:
      
-    git remote add origin https://dev.azure.com/odluserXXXXX/fabmedical/_git/test
+    git remote add origin https://dev.azure.com/odluser{{USER_ID}}/fabmedical/_git/test
     
     git push -u origin --all
     
-* Use **ODL-devops-containers-XXXXX-01** for deploying any resources to Azure
+* Use **ODL-devops-containers-{{USER_ID}}-01** for deploying any resources to Azure
 * For [Exercise 1 -> Task 7](https://github.com/Microsoft/MCW-Containers-and-DevOps/blob/master/Hands-on%20lab/HOL%20step-by-step%20-%20Containers%20and%20DevOps.md#task-7-push-images-to-azure-container-registry) -> Step 13, attendees can use the Service Principal details provided in the Lab Details Page
 
 * Before executing git commit and git push commands, make sure config file in .git folder of each cloned folder ( content-init, content-api, content-web ) has [remote "origin"] URL in the following format :
   
      [remote "origin"]  
-     url = https://dev.azure.com/odluserXXXXX/fabmedical/_git/content-api
+     url = https://dev.azure.com/odluser{{USER_ID}}/fabmedical/_git/content-api
   
-  For editing the config file, you can execute the following commands one by one and edit the file and remove **odluserXXXXX@** from each file.
+  For editing the config file, you can execute the following commands one by one and edit the file and remove **odluser{{USER_ID}}@** from each file.
   
        vi ~/content-api/.git/config
        
@@ -235,4 +234,4 @@ Remove the **odluserXXXXX@** from the above commands like given below:
 
 # Help and Support
 
-If you require any help during the workshop, please reach out to the instructor / proctors. Instructors / proctors might escalate the issue to remote support team, at that time, please pass on your AAD User ID (aad_user_xyz), so that it is easier to look up your environment.
+If you require any help during the workshop, please reach out to the instructor / proctors. Instructors / proctors might escalate the issue to remote support team, at that time, please pass on your AAD User ID ({{AZURE_USER_ID}}), so that it is easier to look up your environment.
