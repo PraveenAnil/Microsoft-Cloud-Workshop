@@ -170,7 +170,7 @@ Remove the **odluser{{USER_ID}}@** from the above commands like given below:
      [remote "origin"]
      url = https://dev.azure.com/odluser{{USER_ID}}/fabmedical/_git/content-api
   
-  For editing the config file, you can execute the following commands one by one and edit the file and remove **odluserXXXXX@** from each file.
+  For editing the config file, you can execute the following commands one by one and edit the file and remove **odluser{{USER_ID}}@** from each file.
   
        vi ~/content-api/.git/config
        
