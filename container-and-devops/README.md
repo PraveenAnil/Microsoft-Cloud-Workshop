@@ -10,10 +10,10 @@ In addition,
 
 # Environment Details
 
- * Azure Username: {{Azure_User_Id}}
- * Azure Password: {{Azure_User_Password}}
- * Linux VM DNS: {{Linux_VM_DNS}}
- * Lab VM DNS: {{Lab_VM_DNS}}
+ * Azure Username: {{AZURE_USER_ID}}
+ * Azure Password: {{AZURE_USER_PASSWORD}}
+ * Linux VM DNS: {{LINUX_VM_DNS}}
+ * Lab VM DNS: {{LAB_VM_DNS}}
 
 
 # Verify the pre-provisioned Environment
