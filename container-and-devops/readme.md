@@ -8,15 +8,17 @@ In addition,
 * Deploy to the Azure Kubernetes Service
 * Scale the application and test availability
 
-# Environment Details
+
+
+# Verify the pre-provisioned Environment
+
+ **Environment Details**
 
  * Azure Username: {{AZURE_USER_ID}}
  * Azure Password: {{AZURE_USER_PASSWORD}}
  * Linux VM DNS: {{LINUX_VM_DNS}}
  * Lab VM DNS: {{LAB_VM_DNS}}
 
-
-# Verify the pre-provisioned Environment
 
 * Open a browser instance in InPrivate / incognito mode and navigate to [Microsoft Azure Portal](https://portal.azure.com) 
 * Login to the portal using Azure Credentials issued for your environment.  
