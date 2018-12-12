@@ -19,6 +19,7 @@ In addition,
  * Linux VM DNS: {{LINUX_VM_DNS}}
  * Lab VM DNS: {{LAB_VM_DNS}}
 
+ **Verify the Environment**
 
 * Open a browser instance in InPrivate / incognito mode and navigate to [Microsoft Azure Portal](https://portal.azure.com) 
 * Login to the portal using Azure Credentials issued for your environment.  
